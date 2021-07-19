@@ -84,20 +84,14 @@ Use the finalScore function below to do the following:
   "Away": 5
 }
 */ 
-
-
-
-function finalScore(innings, number){
-  const currentScore = [];
-  const theScore = {
-   home: 0,
-   away: 0,
-  }
-  for(let i = 0; i < 10; i++){
-    const currentScore = number(innings);
-    inning() = homeScore + currentScore.Home;
-    inning() = awayScore + currentScore.Away;
-    totalGame.push (`Inning ${i + 1}: Away ${homeScore} - Home ${awayScore}`);
+function finalScore(callback, numberOfInnings){
+  const currentScore = {
+    'Home': 0,
+    'Away': 0
+  };
+  for (let i = 1; i <= numberOfInnings; i++) {
+    currentScore['Home'] += callback();
+    currentScore['Away'] += callback();
   }
   return currentScore;
 }
@@ -109,12 +103,7 @@ Use the getInningScore() function below to do the following:
   1. Receive a callback function - you will pass in the inning function from task 2 as your argument 
   2. Return an object with a score for home and a score for away that populates from invoking the inning callback function */
 
-function getInningScore() {
-
-
-
-
-
+function getInningScore(callback,inning) {
 
 
 }
